@@ -1,21 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import React,{useEffect,useState} from 'react'
 import axios from 'axios'
-export default function Home() {
-  const [user,setUser]= useState({})
-  useEffect(()=>{
-    getuser()
-    
-  },[])
-  async function getuser(){
-    await axios.get('https://api.7gas.com.br/user/alessandrolima93@gmail.com').then(
-      res=>{
-        setUser(res.data)
-      }
-    )
-    
-  }
+export default function Home({user}) {
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -25,11 +12,24 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to ak
+          Welcome to portfolio do Noilerua &#9733;
         </h1>
-        <p>{user.name}</p>
-        <p>{user.email}</p>
+        {user.map((item)=>(
+          <span>{item.name}</span>
+        ))}
+       
       </main>
     </div>
   )
+}
+
+export const getStaticProps = async ()=>{
+  const response= await fetch('https://api.github.com/users/limaale/repos')
+  const data= await response.json();
+
+  return{
+    props:{
+      user:data
+    }
+  }
 }
