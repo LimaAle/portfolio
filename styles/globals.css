@@ -1,14 +1,26 @@
+@import url(//db.onlinewebfonts.com/c/2545d122b16126676225a5b52283ae23?family=VCR+OSD+Mono);
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+:root {
+  --blueOpacity:  rgba(86, 245, 255, 0.5);
+  --blue:#56f5ff ;
+}
 html,
 body {
+  -webkit-font-smoothing: antialiased;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:  'VCR OSD Mono', sans-serif;
+  background-color: darkslateblue;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+span {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 2px;
 }
 
 * {
