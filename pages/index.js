@@ -18,7 +18,7 @@ export default function Home({user}) {
         {user.map((item)=>(
           <span className={styles.projectsTitle}>{item.name}</span>
         ))}
-        <span>under development ⚠️</span>
+        <span>⚠️ under development ⚠️</span>
       </main>
     </div>
   )
