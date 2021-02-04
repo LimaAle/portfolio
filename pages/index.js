@@ -19,7 +19,6 @@ export default function Home({user}) {
           <span className={styles.projectsTitle}>{item.name}</span>
         ))}
         <span>under development ⚠️</span>
-        <img src="/ff12_cursor.png" alt="cursor"/>
       </main>
     </div>
   )
