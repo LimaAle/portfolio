@@ -7,7 +7,12 @@ export default function Home({user}) {
     <div className={styles.container}>
       <Head>
         <title>Portfolio Lima</title>
-        <link href="//db.onlinewebfonts.com/c/2545d122b16126676225a5b52283ae23?family=VCR+OSD+Mono" rel="stylesheet" type="text/css"/>
+        <link
+            rel="preload"
+            href="/fonts/VCR/VCR_OSD_MONO_1.001.ttf"
+            as="font"
+            crossOrigin=""
+          />
       </Head>
 
       <main className={styles.main}>
@@ -16,7 +21,7 @@ export default function Home({user}) {
         <span>Projetos</span>
         <span style={{fontFamily: 'DM Mono', color:'#56f5ff'}}>&darr;</span>
         {user.map((item)=>(
-          <span className={styles.projectsTitle}>{item.name}</span>
+          <span className={styles.projectsTitle} key={item.name}>{item.name}</span>
         ))}
         <span>⚠️ under development ⚠️</span>
       </main>

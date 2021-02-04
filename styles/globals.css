@@ -1,5 +1,11 @@
-@import url(//db.onlinewebfonts.com/c/2545d122b16126676225a5b52283ae23?family=VCR+OSD+Mono);
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
+@font-face {
+  font-family: "VCR Mono";
+  src: url("/fonts/VCR/VCR_OSD_MONO_1.001.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 :root {
   --blueOpacity:  rgba(86, 245, 255, 0.5);
   --blue:#56f5ff ;
@@ -9,7 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
   padding: 0;
   margin: 0;
-  font-family:  'VCR OSD Mono', sans-serif;
+  font-family:  'VCR Mono', sans-serif;
   background-color: darkslateblue;
 }
 
